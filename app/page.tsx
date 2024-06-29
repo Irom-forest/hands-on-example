@@ -89,11 +89,12 @@ const Page = () => {
     [setFilteredPrefList]
   );
 
+  // yearをString(year)に修正
   const yearElement = useRef<HTMLElement>(null);
   if (yearElement.current) {
     const date = new Date();
     const year = date.getFullYear();
-    yearElement.current.textContent = year;
+    yearElement.current.textContent = String(year);
   }
 
   const layoutStyle = (tabValue: TabState) => css`
